@@ -1,0 +1,67 @@
+GRAPH DESCRIPTIONS – Northern Virginia Housing Analysis
+======================================================
+Outputs in the order they appear when you run the notebook.
+Simple explanation of what each graph shows.
+
+
+1. hpi_trends.png
+-----------------
+What it is: Line chart of house prices over time (2021–2024).
+What it shows: Average House Price Index (HPI) for Arlington County vs Herndon City by year. Lets you see whether prices went up or down and how the two areas compare.
+
+
+2. employment_trends.png
+------------------------
+What it is: Two panels – (1) number of high-wage jobs by year and location, (2) average wage by year and location.
+What it shows: How many high-wage jobs (and average wage) there were in Arlington vs Herndon each year. Lets you see if job counts and wages grew or stayed flat.
+
+
+3. employment_vs_prices.png
+--------------------------
+What it is: Scatter plot of high-wage jobs (x-axis) vs average HPI (y-axis), with a trend line per location.
+What it shows: Whether areas with more high-wage jobs tend to have higher or lower house prices. Each point is one year–location; the lines show the overall relationship.
+
+
+4. building_permits.png
+-----------------------
+What it is: Bar chart of building permits by year.
+What it shows: How many housing permits (supply) there were each year in the study region. Lets you see if new construction was going up or down over 2021–2024.
+
+
+5. price_vs_supply.png
+----------------------
+What it is: Two lines over time – mean HPI (left axis) and permits per 1,000 households (right axis).
+What it shows: House prices and supply intensity side by side by year. Lets you see if prices move in the same or opposite direction as supply (e.g. more supply, lower or flatter prices).
+
+
+6. price_vs_supply_scatter.png
+-------------------------------
+What it is: Scatter plot – x = permits per 1,000 households (supply), y = mean HPI (price). Points labeled by year.
+What it shows: In one picture, how price level relates to supply level. Lets you see if higher supply tends to go with lower prices or the other way around.
+
+
+7. distributions.png
+--------------------
+What it is: Three panels – (1) histogram of ln(HPI), (2) histogram of ln(high-wage jobs), (3) bar chart of average HPI by ZIP code.
+What it shows: How the main variables are spread out (their “shape”) and which ZIPs have higher or lower average prices. Helps you see if the data look reasonable and which areas are pricier.
+
+
+8. interest_rate_trend.png
+--------------------------
+What it is: Line chart of the Federal Funds (interest) rate by year.
+What it shows: How the Fed’s interest rate changed from 2021 to 2024. Lets you see the rate hikes in this period that can affect mortgage rates and housing demand.
+
+
+9. diagnostics.png
+------------------
+What it is: Four small plots used to check the regression (residuals vs fitted, Q–Q plot, scale–location, histogram of residuals).
+What it shows: Whether the regression fits the data in a consistent way (e.g. no obvious patterns in errors, roughly normal residuals). Used to check that the model is okay, not to read a single “result” from.
+
+
+---
+DATA FILES (saved to outputs/) – order they are created:
+---
+1. panel_summary_stats.csv    – Summary stats (mean, std, min, max) for HPI, jobs, permits in the panel.
+2. price_vs_supply_summary.csv – Table by year: mean HPI, supply (permits per 1k HH), and price % change.
+3. panel_data_output.csv      – Full panel used in the regression (one row per ZIP-year).
+4. regression_results.csv     – Regression coefficients, standard errors, t-stats, p-values.
